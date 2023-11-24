@@ -1,0 +1,22 @@
+<h1>Listagem de todas as tarefas</h1>
+
+<table>
+    <tbody *ngFor="let tarefa of tarefas">
+        <tr>
+            <th>ID</th>
+            <td>{{ tarefa.TarefaId }}</td>
+        </tr>
+        <tr>
+            <th>Titulo</th>
+            <td>{{ tarefa.Titulo }}</td>
+        </tr>
+        <tr>
+            <th>Descricao</th>
+            <td>{{ tarefa.Descricao }}</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>{{ tarefa.Status }}</td>
+        </tr>
+    </tbody>
+</table>
