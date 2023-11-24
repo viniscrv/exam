@@ -1,1 +1,13 @@
-<p>cadastrar works!</p>
+<form action="">
+    <div>
+        <label>Nome da tarefa</label>
+        <input type="text" [(ngModel)]="tituloTarefa"/>
+    </div>
+    <div>
+        <label>Descrição da tarefa</label>
+        <input type="text"  [(ngModel)]="descricaoTarefa" />
+    </div>
+</form>
+
+
+<button (click)="atualizarTarefa()">atualizar tarefa</button>

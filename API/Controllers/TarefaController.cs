@@ -43,7 +43,11 @@ public class TarefaController : ControllerBase
                 return NotFound();
             }
             tarefa.Categoria = categoria;
-            tarefa.Status = "Em andamento";
+
+            if (tarefa.Status == null) {
+                tarefa.Status = "Em andamento";
+            }
+            
             _context.Tarefas.Add(tarefa);
             _context.SaveChanges();
             return Created("", tarefa);
