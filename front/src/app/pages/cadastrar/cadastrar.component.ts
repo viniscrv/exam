@@ -19,10 +19,10 @@ export class CadastrarComponent implements OnInit {
 
   atualizarTarefa() {
     let tarefa: Tarefa = {
-      Titulo: this.tituloTarefa,
-      Descricao: this.descricaoTarefa,
-      Status: "Não iniciada",
-      CategoriaId: 1
+      titulo: this.tituloTarefa,
+      descricao: this.descricaoTarefa,
+      status: "Não iniciada",
+      categoriaId: 1
     }
 
     this.client.post<Tarefa>("https://localhost:7015/api/tarefa/cadastrar", tarefa)
@@ -41,5 +41,21 @@ export class CadastrarComponent implements OnInit {
           console.log(erro);
         },
       });
+  }
+
+  irParaListagemGeral() {
+    this.router.navigate(["pages/tarefa/listar"]);
+  }
+  irParaListagemNaoConcluidas() {
+    this.router.navigate(["pages/tarefa/listarnaoconcluidas"]);
+  }
+  irParaListagemConcluidas() {
+    this.router.navigate(["pages/tarefa/listarconcluidas"]);
+  }
+  irParaAlterarStatus() {
+    this.router.navigate(["pages/tarefa/alterar"]);
+  }
+  irParaCadastro() {
+    this.router.navigate(["pages/tarefa/cadastrar"]);
   }
 }

@@ -1,8 +1,8 @@
 export interface Tarefa{
-    TarefaId? : number;
-    Titulo : string;
-    Descricao : string;
-    Status : string;
-    CriadoEm? : string;
-    CategoriaId : number;
+    tarefaId? : number;
+    titulo : string;
+    descricao : string;
+    status : string;
+    criadoEm? : string;
+    categoriaId : number;
 }

@@ -1,4 +1,18 @@
+<h2>Navegação</h2>
+<div class="btn-container">
+    <button (click)="irParaListagemNaoConcluidas()">Ver não concluidas</button>
+    <button (click)="irParaListagemConcluidas()">Ver concluidas</button>
+    <button (click)="irParaListagemGeral()">Ver todas</button>
+    <button (click)="irParaAlterarStatus()">Alterar status de uma tarefa</button>
+    <button (click)="irParaCadastro()">Cadastrar nova tarefa</button>
+</div>
+<form action="" style="margin-top: 32px;">
+    <div>
+        <label>Id da tarefa</label>
+        <input type="text" name="tarefaId" [(ngModel)]="tarefaId" />
+    </div>
+</form>
+
+<button class="btn-form" (click)="atualizarTarefa()">Alterar status da tarefa</button>
 
 
-
-<button>Alterar status da tarefa</button>

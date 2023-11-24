@@ -1,13 +1,22 @@
+<h2>Navegação</h2>
+<div class="btn-container">
+    <button (click)="irParaListagemNaoConcluidas()">Ver não concluidas</button>
+    <button (click)="irParaListagemConcluidas()">Ver concluidas</button>
+    <button (click)="irParaListagemGeral()">Ver todas</button>
+    <button (click)="irParaAlterarStatus()">Alterar status de uma tarefa</button>
+    <button (click)="irParaCadastro()">Cadastrar nova tarefa</button>
+</div>
 <form action="">
     <div>
         <label>Nome da tarefa</label>
-        <input type="text" [(ngModel)]="tituloTarefa"/>
+        <input type="text" name="tituloTarefa" [(ngModel)]="tituloTarefa"/>
     </div>
     <div>
         <label>Descrição da tarefa</label>
-        <input type="text"  [(ngModel)]="descricaoTarefa" />
+        <input type="text" name="descricaoTarefa" [(ngModel)]="descricaoTarefa" />
     </div>
 </form>
 
 
-<button (click)="atualizarTarefa()">atualizar tarefa</button>
+<button class="btn-form" (click)="atualizarTarefa()">cadastrar tarefa</button>
+

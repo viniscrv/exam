@@ -1,22 +1,24 @@
-<h1>Listagem de todas as tarefas</h1>
+<h2>Navegação</h2>
+<div class="btn-container">
+    <button (click)="irParaListagemNaoConcluidas()">Ver não concluidas</button>
+    <button (click)="irParaListagemConcluidas()">Ver concluidas</button>
+    <button (click)="irParaListagemGeral()">Ver todas</button>
+    <button (click)="irParaAlterarStatus()">Alterar status de uma tarefa</button>
+    <button (click)="irParaCadastro()">Cadastrar nova tarefa</button>
+</div>
+<h1>Listagem de todas as tarefas não concluidas</h1>
 
 <table>
+    <thead>
+        <th>ID</th>
+        <th>Titulo</th>
+        <th>Descricao</th>
+        <th>Status</th>
+    </thead>
     <tbody *ngFor="let tarefa of tarefas">
-        <tr>
-            <th>ID</th>
-            <td>{{ tarefa.TarefaId }}</td>
-        </tr>
-        <tr>
-            <th>Titulo</th>
-            <td>{{ tarefa.Titulo }}</td>
-        </tr>
-        <tr>
-            <th>Descricao</th>
-            <td>{{ tarefa.Descricao }}</td>
-        </tr>
-        <tr>
-            <th>Status</th>
-            <td>{{ tarefa.Status }}</td>
-        </tr>
+        <td>{{ tarefa.tarefaId }}</td>
+        <td>{{ tarefa.titulo }}</td>
+        <td>{{ tarefa.descricao }}</td>
+        <td>{{ tarefa.status }}</td>
     </tbody>
 </table>
